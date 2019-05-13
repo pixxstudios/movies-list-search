@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-mongo-swagger",
+  "version": "1.0.0",
+  "description": "Implementing Swagger using MongoDB and NodeJS",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.19.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixxstudios/nodejs-mongo-swagger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pixxstudios/nodejs-mongo-swagger/issues"
+  },
+  "homepage": "https://github.com/pixxstudios/nodejs-mongo-swagger#readme"
+}
