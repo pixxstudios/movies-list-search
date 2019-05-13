@@ -40,3 +40,4 @@ Babel
 Webpack
 express
 dotenv
+mogoose

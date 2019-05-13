@@ -4,7 +4,9 @@
   "description": "Implementing Swagger using MongoDB and NodeJS",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
+    "mongoose": "^5.5.7",
     "nodemon": "^1.19.0"
   },
   "devDependencies": {},
