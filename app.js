@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 require('dotenv/config');
-const postsRoute = require('./routes/posts');
+const boooksRoute = require('./routes/books');
 
-app.use('/posts', postsRoute);
+app.use('/books', postsRoute);
 
 app.get('/', (req, res) => {
     res.send('Hello World !!');
