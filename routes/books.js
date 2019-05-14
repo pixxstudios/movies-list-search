@@ -7,7 +7,6 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    console.log(req.body);
     const book = new Book({
         title: req.body.title,
         authors: req.body.authors,
