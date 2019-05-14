@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
     res.send('We are inside books');
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     const book = new Book({
         title: req.body.title,
         authors: req.body.authors,
@@ -16,9 +16,12 @@ router.post('/', (req, res) => {
         price: req.body.price
     });
 
-    book.save()
-    .then(data => { res.json(data) })
-    .catch(err => { res.json({ message: err }) });
+    try {
+        const savedBook = await book.save();
+        res.json(savedBook);
+    } catch(err) {
+        res.json({ message: err });
+    };
 });
 
 module.exports = router;

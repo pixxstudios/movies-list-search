@@ -40,4 +40,5 @@ Babel
 Webpack
 express
 dotenv
-mogoose
+mongoose
+body-parser
