@@ -6,6 +6,8 @@ Creating a book/library system to view book details. Search the library using ti
 
 This application uses React version 16.8 and makes use of React Hooks.
 
+// Add multilanguage feature
+
 Tech stack:
 // Frontend
 HTML5, CSS
