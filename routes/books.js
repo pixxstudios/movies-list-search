@@ -8,6 +8,18 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     console.log(req.body);
+    const book = new Book({
+        title: req.body.title,
+        authors: req.body.authors,
+        description: req.body.description,
+        image: req.body.image,
+        categories: req.body.categories,
+        price: req.body.price
+    });
+
+    book.save()
+    .then(data => { res.json(data) })
+    .catch(err => { res.json({ message: err }) });
 });
 
 module.exports = router;
