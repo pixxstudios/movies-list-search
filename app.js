@@ -1,11 +1,15 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const booksRoute = require('./routes/books');
+const bodyParser = require('body-parser');
 require('dotenv/config');
-const boooksRoute = require('./routes/books');
 
-app.use('/books', postsRoute);
+// middlewares
+app.use(bodyParser.json());
+app.use('/books', booksRoute);
 
+// home
 app.get('/', (req, res) => {
     res.send('Hello World !!');
 });

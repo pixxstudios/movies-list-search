@@ -22,7 +22,9 @@ const BookSchema = mongoose.Schema({
         required: true
     },
     price: {
-        type: float,
+        type: Number,
         required: true
     }
 });
+
+module.exports = mongoose.model('Book', BookSchema);
