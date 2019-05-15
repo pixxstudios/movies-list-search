@@ -19,6 +19,7 @@ Bootstrap
 // Backend
 MongoDB
 Nodejs, ExpressJS
+GraphQL --> maybe
 
 // Documentation
 
