@@ -1,9 +1,10 @@
 import * as React from 'react';
+import Header from '../header/index';
 
 export default () => {
-    return(
-        <div className="container">
-            <h3>"welcome to books management."</h3>
-        </div>
-    )
+return(
+<div className="container-fluid">
+    <Header />
+</div>
+)
 }
