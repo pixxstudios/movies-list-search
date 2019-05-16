@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "concurrently \"nodemon app.js\" \"webpack-dev-server --open --mode development\"",
-    "dev": "webpack --mode development",
+    "dev": "webpack --mode development --watch",
     "build": "webpack --mode production"
   },
   "repository": {

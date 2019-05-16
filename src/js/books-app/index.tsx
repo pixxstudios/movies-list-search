@@ -2,6 +2,8 @@ import * as React from 'react';
 
 export default () => {
     return(
-        <h3>"welcome to books management"</h3>
+        <div className="container">
+            <h3>"welcome to books management."</h3>
+        </div>
     )
 }
