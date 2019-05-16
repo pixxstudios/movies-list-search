@@ -16,11 +16,7 @@
     "typescript": "^3.4.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/preset-react": "^7.0.0",
     "awesome-typescript-loader": "^5.2.1",
-    "babel-loader": "^8.0.6",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.0.0",
     "webpack": "^4.31.0",
