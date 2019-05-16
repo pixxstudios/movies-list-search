@@ -1,7 +1,6 @@
 module.exports = {
-    entry: "./src/index.ts",
+    entry: "./src/index.tsx",
     resolve: {
-        // Add `.ts` and `.tsx` as a resolvable extension.
         extensions: [".ts", ".tsx", ".js"]
       },
     module: {
@@ -10,7 +9,7 @@ module.exports = {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use:{
-                    loader: "ts-loader"
+                    loader: "awesome-typescript-loader"
                 }
             }
         ]
