@@ -4,6 +4,7 @@
   "description": "Implementing Swagger using MongoDB and NodeJS",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.0",
     "dotenv": "^8.0.0",
@@ -29,7 +30,6 @@
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "test": "jest"
-
   },
   "repository": {
     "type": "git",
