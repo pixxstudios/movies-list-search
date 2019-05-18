@@ -9,12 +9,14 @@ This application uses React version 16.8 and makes use of React Hooks.
 // Add multilanguage feature
 
 Tech stack:
+
 // Frontend
 HTML5, CSS
 TypeScript
 React, JSX, Redux
 SASS
 Bootstrap
+Style components
 
 // Backend
 MongoDB

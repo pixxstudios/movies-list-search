@@ -20,7 +20,13 @@
     "typescript": "^3.4.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@storybook/addon-actions": "^5.2.0-alpha.9",
+    "@storybook/addon-links": "^5.2.0-alpha.9",
+    "@storybook/addons": "^5.2.0-alpha.9",
+    "@storybook/react": "^5.2.0-alpha.9",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.0.0",
     "webpack": "^4.31.0",
@@ -31,7 +37,9 @@
     "start": "concurrently \"nodemon app.js\" \"webpack-dev-server --open --mode development\"",
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
