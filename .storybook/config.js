@@ -1,5 +1,4 @@
 import { configure } from '@storybook/react';
-import '../src/style/bootstrap.min.css';
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../stories', true, /\.stories\.js$/);
