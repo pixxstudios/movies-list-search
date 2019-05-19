@@ -1,10 +1,13 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
+import './index.scss';
 
 const Button = props => {
     return (
         <button
+            className="btn btn-primary"
             onClick={props.click}
+            type="button"
             value={props.value}>
             {props.value}
         </button>
