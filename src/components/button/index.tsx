@@ -4,20 +4,18 @@ import ButtonWrapper from './styled';
 
 const Button = props => {
     return (
-        <ButtonWrapper>
-            Primary
+        <ButtonWrapper {...props}>
+            CLICK ME!
         </ButtonWrapper>
     )
 };
 
 Button.defaultProps = {
-    click: () => {},
-    value: ''
+    click: () => {}
 };
 
 Button.propTypes = {
-    click: PropTypes.func,
-    value: PropTypes.string
+    click: PropTypes.func
 };
 
 export default Button;

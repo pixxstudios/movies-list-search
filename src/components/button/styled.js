@@ -10,7 +10,7 @@ const ButtonWrapper = styled.button`
     outline: none;
     cursor: pointer;
 
-    ${props => props.primary &&
+    ${props => props.PRIMARY &&
     css`
         background: palevioletred;
         color: white;
