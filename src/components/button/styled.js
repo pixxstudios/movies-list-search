@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components';
 
 const ButtonWrapper = styled.button`
-    background: transparent;
+    background: #3477FE;
     border-radius: 3px;
-    border: 2px solid palevioletred;
-    color: palevioletred;
+    color: white;
     margin: 0.5em 1em;
     padding: 0.25em 1em;
     outline: none;
@@ -12,9 +11,14 @@ const ButtonWrapper = styled.button`
 
     ${props => props.PRIMARY &&
     css`
-        background: palevioletred;
-        color: white;
+        background: #34A6FE;
     `}
+
+    ${props => props.DISABLED &&
+        css`
+            background: #c2c2c2;
+            cursor: not-allowed;
+        `}
 `;
 
 export default ButtonWrapper;

@@ -11,7 +11,7 @@ import Button from '../src/components/button/index';
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
-  .add('Default', () => <Button DEFAULT />)
+  .add('Default', () => <Button />)
   .add('Primary', () => <Button PRIMARY />)
   .add('Disabled', () => <Button DISABLED />)
 ;
