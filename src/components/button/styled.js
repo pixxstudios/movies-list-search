@@ -7,6 +7,8 @@ const ButtonWrapper = styled.button`
     color: palevioletred;
     margin: 0.5em 1em;
     padding: 0.25em 1em;
+    outline: none;
+    cursor: pointer;
 
     ${props => props.primary &&
     css`
