@@ -1,9 +1,10 @@
 import * as React from 'react';
+import BookCardWrapper from './styled';
 
 export default () => {
     return (
-        <div>
+        <BookCardWrapper>
             "This is a book card"
-        </div>
+        </BookCardWrapper>
     )
 }

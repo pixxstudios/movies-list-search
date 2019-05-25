@@ -15,7 +15,7 @@ return(
                 <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
+                <Link className="nav-link" to="/all-books">View All Books</Link>
             </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">

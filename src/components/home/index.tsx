@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import BookCard from '../book-card';
 // import { getAllBooks } from '../../actions/index';
 
 const Home = () => {
@@ -12,7 +13,10 @@ const Home = () => {
     });
 
     return(
-        <h3>Home Page</h3>
+        <div>
+            <h4>Recently added books</h4>
+            <BookCard />
+        </div>
     )
 };
 
