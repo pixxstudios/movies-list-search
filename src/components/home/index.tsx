@@ -16,6 +16,16 @@ const Home = () => {
         <div>
             <h4>Recently added books</h4>
             <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
         </div>
     )
 };
