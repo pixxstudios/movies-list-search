@@ -1,16 +1,17 @@
 import * as React from 'react';
-import ClipLoader from 'react-spinners/ClipLoader';
+import SyncLoader from 'react-spinners/SyncLoader';
+import LoaderWrapper from './styled';
 
 const Loader = props => {
     return (
-        <div>
-            <ClipLoader
+        <LoaderWrapper>
+            <SyncLoader
                 sizeUnit={"px"}
-                size={150}
-                color={'#123abc'}
+                size={15}
+                color={'#F5A623'}
                 loading={props.isLoading}
             />
-        </div>
+        </LoaderWrapper>
     )
 };
 
