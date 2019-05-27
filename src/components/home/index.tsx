@@ -6,11 +6,11 @@ import BookCard from '../book-card';
 import Loader from '../loader';
 // import { getAllBooks } from '../../actions/index';
 
-const Home = () => {
+const Home = props => {
     const [isLoading, handleLoading] = useState(true);
 
     useEffect(() => {
-        // console.log('use effect ', getAllBooks);
+        console.log('initial state', props);
         // actions.getAllBooks();
         axios.get('http://localhost:4444/books', {});
     });
@@ -36,4 +36,10 @@ const Home = () => {
     )}
 };
 
-export default connect()(Home);
+function mapStateToProps(state) {
+    return {
+        books: state.books
+    }
+}
+
+export default connect(mapStateToProps)(Home);
