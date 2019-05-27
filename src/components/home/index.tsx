@@ -10,7 +10,7 @@ const Home = props => {
     const [isLoading, handleLoading] = useState(true);
 
     useEffect(() => {
-        console.log('initial state', props);
+        console.log('initial state', props.books);
         // actions.getAllBooks();
         axios.get('http://localhost:4444/books', {});
     });
@@ -42,4 +42,8 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Home);
+function mapStateToAction() {
+    return {}
+}
+
+export default connect(mapStateToProps, mapStateToAction)(Home);
