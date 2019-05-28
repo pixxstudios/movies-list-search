@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { connect } from 'react-redux';
 import BookCard from '../book-card';
 import Loader from '../loader';
@@ -12,6 +12,7 @@ const Home = props => {
     useEffect(() => {
         console.log(props);
         props.getAllBooks();
+        console.log('_____');
         // axios.get('http://localhost:4444/books', {});
     });
 
@@ -36,16 +37,16 @@ const Home = props => {
     )}
 };
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
     return {
         books: state.books
     }
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
     return {
         getAllBooks: () => dispatch(getAllBooks)
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);  
