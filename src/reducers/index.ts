@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import * as actions from '../actions/index';
+// import * as actions from '../actions/index';
 
 const defaultState = [
     {
@@ -14,7 +14,7 @@ const defaultState = [
 
 const booksReducer = (state = defaultState, action) => {
     switch(action.type){
-        case actions.GET_ALL_BOOKS: {
+        case 'GET_ALL_BOOKS': {
             return {}
         }
 

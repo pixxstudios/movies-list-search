@@ -4,18 +4,20 @@ import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import BookCard from '../book-card';
 import Loader from '../loader';
-import getAllBooks from '../../actions';
+import { getAllBooks } from '../../actions';
 
 const Home = props => {
     const [isLoading, handleLoading] = useState(true);
 
     useEffect(() => {
         console.log(props);
-        props.getAllBooks();
+        // props.getAllBooks();
         console.log('_____');
         // axios.get('http://localhost:4444/books', {});
     });
 
+    // props.getAllBooks();
+    
     if (isLoading) {
         return <Loader isLoading />
     } else {
@@ -45,7 +47,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        getAllBooks: () => dispatch(getAllBooks)
+        getAllBooks: () => {
+            console.log('getAllBooks ', getAllBooks);
+            dispatch(getAllBooks())
+        ;}
     }
 }
 
