@@ -4,7 +4,6 @@ import axios from 'axios';
 
 export function* getBooks() {
     const response = yield axios.get('http://localhost:4444/books');
-    console.log('response ', response);
     if(response.status === 200)
         yield put(actions.getAllBooksSuccess(response.data));
     else
