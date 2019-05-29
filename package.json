@@ -4,6 +4,7 @@
   "description": "Implementing Swagger using MongoDB and NodeJS",
   "main": "index.js",
   "dependencies": {
+    "@material-ui/core": "^4.0.1",
     "axios": "^0.18.0",
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.0",

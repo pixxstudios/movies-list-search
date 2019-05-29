@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import * as actions from '../actions/index';
 
-const defaultState = [
+/* const defaultState = [
     {
         "authors":[],
         "categories":[],
@@ -10,12 +10,14 @@ const defaultState = [
         "image": null,
         "price": null
     }
-];
+]; */
+
+const defaultState = {};
 
 const booksReducer = (state = defaultState, action) => {
     switch(action.type){
-        case actions.GET_ALL_BOOKS: {
-            return {}
+        case actions.GET_ALL_BOOKS_SUCCESS: {
+            return { ...state, booksList: action.booksList }
         }
 
         default: {
