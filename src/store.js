@@ -4,11 +4,15 @@ import {
     compose
 } from 'redux';
 import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 import combineReducers from './reducers'
+import { getBooksSaga } from '../sagas/books_saga';
 
 const initialState = {};
 
-const middleware = [thunk];
+const sagaMiddleware = createSagaMiddleware();
+
+const middleware = [thunk, sagaMiddleware];
 
 const store = createStore(
     combineReducers,
@@ -18,5 +22,7 @@ const store = createStore(
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
 );
+
+sagaMiddleware.run(getBooksSaga);
 
 export default store;
