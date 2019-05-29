@@ -6,11 +6,13 @@ import Loader from '../loader';
 import { getAllBooksRequest } from '../../actions';
 
 const Home = props => {
-    const [isLoading, handleLoading] = useState(true);
+    // const [isLoading, handleLoading] = useState(true);
 
     useEffect(() => {
         props.getAllBooks();
     }, []);
+
+    const { isLoading } = props;
     
     if (isLoading) {
         return <Loader isLoading />
@@ -35,7 +37,8 @@ const Home = props => {
 
 const mapStateToProps = state => {
     return {
-        books: state.books
+        booksList: state.books.booksList,
+        isLoading: state.books.isLoading
     }
 }
 
