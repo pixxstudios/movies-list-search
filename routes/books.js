@@ -4,6 +4,7 @@ const Book = require('../models/book');
 
 router.get('/',async (req, res) => {
     const books = await Book.find();
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
     res.json(books);
 });
 
