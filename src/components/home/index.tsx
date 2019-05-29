@@ -11,12 +11,9 @@ const Home = props => {
 
     useEffect(() => {
         console.log(props);
-        // props.getAllBooks();
-        console.log('_____');
+        props.getAllBooks();
         // axios.get('http://localhost:4444/books', {});
-    });
-
-    // props.getAllBooks();
+    }, []);
     
     if (isLoading) {
         return <Loader isLoading />
@@ -47,10 +44,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        getAllBooks: () => {
-            console.log('getAllBooks ', getAllBooks);
-            dispatch(getAllBooks())
-        ;}
+        getAllBooks: () => { dispatch(getAllBooks()); }
     }
 }
 
