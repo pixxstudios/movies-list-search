@@ -6,8 +6,6 @@ import Loader from '../loader';
 import { getAllBooksRequest } from '../../actions';
 
 const Home = props => {
-    // const [isLoading, handleLoading] = useState(true);
-
     useEffect(() => {
         props.getAllBooks();
     }, []);
@@ -15,7 +13,7 @@ const Home = props => {
     const { isLoading } = props;
     
     if (isLoading) {
-        return <Loader isLoading />
+        return <Loader />
     } else {
     return(
         <div>
