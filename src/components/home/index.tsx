@@ -13,7 +13,7 @@ const Home = props => {
     const { isLoading } = props;
     
     if (isLoading) {
-        return <Loader />
+        return <Loader isLoading/>
     } else {
     return(
         <div>

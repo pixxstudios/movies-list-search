@@ -5,7 +5,7 @@ import Home from '../home'
 
 export default () => {
 return(
-<div className="container-fluid">
+<div>
     <BrowserRouter>
         <Header />
         <Home />
