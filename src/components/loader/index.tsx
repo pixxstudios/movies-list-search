@@ -1,16 +1,26 @@
 import * as React from 'react';
-import SyncLoader from 'react-spinners/SyncLoader';
 import LoaderWrapper from './styled';
+import {
+    createStyles,
+    Theme,
+    makeStyles
+} from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-const Loader = props => {
+const Loader = () => {
+    const useStyles = makeStyles((theme: Theme) =>
+        createStyles({
+            progress: {
+                margin: theme.spacing(2),
+            },
+        }),
+    );
+
+    const classes = useStyles();
+
     return (
-        <LoaderWrapper>
-            <SyncLoader
-                sizeUnit={"px"}
-                size={15}
-                color={'#F5A623'}
-                loading={props.isLoading}
-            />
+        <LoaderWrapper >
+            <CircularProgress className = {classes.progress}/>
         </LoaderWrapper>
     )
 };
