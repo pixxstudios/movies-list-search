@@ -2,12 +2,18 @@ import styled from 'styled-components';
 
 const LoginWrapper = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
     background-color: #478dff;
     color: white;
     padding: 30px;
+`;
+
+const Heading = styled.h1`
+    font-family: Dancing;
 `;
 
 const LoginForm = styled.div`
@@ -20,4 +26,4 @@ const LoginForm = styled.div`
     color: black;
 `;
 
-export { LoginWrapper, LoginForm };
+export { LoginWrapper, LoginForm, Heading };

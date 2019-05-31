@@ -1,9 +1,20 @@
 import * as React from 'react'
-import { LoginWrapper, LoginForm } from './styled';
+import { useEffect } from 'react';
+import { LoginWrapper, LoginForm, Heading } from './styled';
 
 export default () => {
+
+    useEffect(() => {
+
+    }, []);
+
+    const handleFormSubmission = () => {
+        console.log('clicked !!');
+    };
+
     return (
         <LoginWrapper>
+            <Heading>Books Information System</Heading>
             <LoginForm>
                 <form className="needs-validation" noValidate>
                     <div className="form-row">
@@ -21,7 +32,7 @@ export default () => {
                         </div>
                     </div>
                     <div className="form-row">
-                        <button type="button" className="btn btn-warning">Login</button>
+                        <button onClick={handleFormSubmission} type="button" className="btn btn-warning">Login</button>
                     </div>
                 </form>
             </LoginForm>
