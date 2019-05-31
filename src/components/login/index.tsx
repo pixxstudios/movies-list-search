@@ -1,15 +1,20 @@
 import * as React from 'react'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
 import { LoginWrapper, LoginForm, Heading } from './styled';
+import { checkUserCredentialsRequest } from '../../actions';
 
-export default () => {
+const Login = props => {
+    const [username, updateUsername] = useState('');
+    const [password, updatePassword] = useState('');
 
     useEffect(() => {
-
+        console.log('use effect');
     }, []);
 
     const handleFormSubmission = () => {
-        console.log('clicked !!');
+        props.checkUserCredentials(username, password);
+        // dispatch(checkUserCredentials(username, password));
     };
 
     return (
@@ -20,14 +25,14 @@ export default () => {
                     <div className="form-row">
                         <div className="col-md-12 mb-3">
                             <label htmlFor="username">Username</label> 
-                            <input type="text" className="form-control" id="username" placeholder="Username" required />
+                            <input onChange={e => updateUsername(e.target.value)} type="text" className="form-control" id="username" placeholder="Username" required />
                             <div className="valid-feedback">Looks good!</div>
                         </div>
                     </div>
                     <div className="form-row">
                         <div className="col-md-12 mb-3">
                             <label htmlFor="password">Password</label> 
-                            <input type="password" className="form-control" id="password" placeholder="Password" required />
+                            <input onChange={e => updatePassword(e.target.value)} type="password" className="form-control" id="password" placeholder="Password" required />
                             <div className="valid-feedback">Looks good!</div>
                         </div>
                     </div>
@@ -39,3 +44,18 @@ export default () => {
         </LoginWrapper>
     )
 }
+
+const mapStateToProps = state => {
+    return {
+        booksList: state.books.booksList,
+        isLoading: state.books.isLoading
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        checkUserCredentials: (username, password) => { dispatch(checkUserCredentialsRequest(username, password)); }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
