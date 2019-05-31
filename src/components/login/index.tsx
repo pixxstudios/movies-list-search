@@ -1,10 +1,10 @@
 import * as React from 'react'
-import LoginWrapper from './styled';
+import { LoginWrapper, LoginForm } from './styled';
 
 export default () => {
     return (
         <LoginWrapper>
-            <h3>This is the login form</h3>
+            <LoginForm>This is the login form</LoginForm>
         </LoginWrapper>
     )
 }
