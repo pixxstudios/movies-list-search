@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { connect } from 'react-redux';
 import { LoginWrapper, LoginForm, Heading } from './styled';
 import { checkUserCredentialsRequest } from '../../actions';
@@ -8,13 +8,8 @@ const Login = props => {
     const [username, updateUsername] = useState('');
     const [password, updatePassword] = useState('');
 
-    useEffect(() => {
-        console.log('use effect');
-    }, []);
-
     const handleFormSubmission = () => {
         props.checkUserCredentials(username, password);
-        // dispatch(checkUserCredentials(username, password));
     };
 
     return (
