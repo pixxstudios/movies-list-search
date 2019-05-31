@@ -13,9 +13,11 @@ const LoginWrapper = styled.div`
 const LoginForm = styled.div`
     width: 400px;
     height: 300px;
+    background: #eee5ff;
     border: 1px solid yellow;
     border-radius: 10px;
     padding: 20px;
+    color: black;
 `;
 
 export { LoginWrapper, LoginForm };
