@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Router, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-// import Header from '../header';
 import Home from '../home'
 import Login from '../login'
 
@@ -16,11 +15,3 @@ export default () => {
         </Router>
     )
 }
-/* return(
-<div>
-    <BrowserRouter>
-        <Header />
-        <Home />
-    </BrowserRouter>
-</div>
-) */

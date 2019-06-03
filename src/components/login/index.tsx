@@ -9,7 +9,6 @@ const Login = (props: any) => {
     const [password, updatePassword] = useState('');
 
     const handleFormSubmission = () => {
-        console.log('handleFormSubmission ', props);
         props.history.push('/home');
         // props.checkUserCredentials(username, password);
     };
