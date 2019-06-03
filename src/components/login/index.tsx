@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useState } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { LoginWrapper, LoginForm, Heading } from './styled';
 import { checkUserCredentialsRequest } from '../../actions';
 
@@ -10,7 +9,7 @@ const Login = (props: any) => {
     const [password, updatePassword] = useState('');
 
     const handleFormSubmission = () => {
-        console.log('handleFormSubmission');
+        console.log('handleFormSubmission ', props);
         props.history.push('/home');
         // props.checkUserCredentials(username, password);
     };
@@ -47,10 +46,10 @@ const mapStateToProps = () => {
     return {}
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        checkUserCredentials: (username, password) => { dispatch(checkUserCredentialsRequest(username, password)); }
+        checkUserCredentials: (username: string, password: string) => { dispatch(checkUserCredentialsRequest(username, password)); }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Login));
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
