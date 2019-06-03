@@ -5,7 +5,7 @@ import BookCard from '../book-card';
 import Loader from '../loader';
 import { getAllBooksRequest } from '../../actions';
 
-const Home = props => {
+const Home = (props: any) => {
     useEffect(() => {
         props.getAllBooks();
     }, []);

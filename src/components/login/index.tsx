@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import { LoginWrapper, LoginForm, Heading } from './styled';
 import { checkUserCredentialsRequest } from '../../actions';
 
-const Login = props => {
+const Login = (props: any) => {
     const [username, updateUsername] = useState('');
     const [password, updatePassword] = useState('');
 
