@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import BookCard from '../book-card';
 import Loader from '../loader';
+import Header from '../header';
 import { getAllBooksRequest } from '../../actions';
 
 const Home = (props: any) => {
@@ -17,7 +18,7 @@ const Home = (props: any) => {
     } else {
     return(
         <div>
-            <h4>Recently added books</h4>
+            <Header />
             <BookCard />
             <BookCard />
             <BookCard />
