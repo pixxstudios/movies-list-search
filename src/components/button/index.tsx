@@ -4,8 +4,8 @@ import ButtonWrapper from './styled';
 
 const Button = props => {
     return (
-        <ButtonWrapper {...props} disabled="true">
-            CLICK ME!
+        <ButtonWrapper {...props}>
+            {props.value}
         </ButtonWrapper>
     )
 };
