@@ -3,7 +3,12 @@ import HeaderWrapper from './styled';
 
 const Header = () => {
 return (
-        <HeaderWrapper>Header</HeaderWrapper>
+        <HeaderWrapper>
+            <ul>
+                <li>Add New Book</li>
+                <li>Download</li>
+            </ul>
+        </HeaderWrapper>
     )
 };
 
