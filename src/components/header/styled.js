@@ -23,8 +23,13 @@ ul {
         margin-right: 10px;
         text-align: center;
 
-        :hover {
-            color: yellow;
+        a {
+            color: white;
+            text-decoration: none;
+
+            :hover {
+                color: yellow;
+            }
         }
     }
 }
