@@ -6,6 +6,8 @@ import { PRIMARY } from '../button/variants';
 import Multiselect from 'multiselect-dropdown-react';
 
 const AddBook = props => {
+    const image = null;
+
     const categories = [
         {
         name: 'Technical',
