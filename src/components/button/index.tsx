@@ -5,7 +5,7 @@ import { PRIMARY } from './variants';
 
 const Button = props => {
     return (
-        <ButtonWrapper {...props}>
+        <ButtonWrapper {...props} onClick={props.click}>
             {props.value}
         </ButtonWrapper>
     )
