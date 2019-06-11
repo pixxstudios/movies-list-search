@@ -5,6 +5,7 @@ const AddBookWrapper = styled.div`
     flex-direction: column;
     flex-flow: column;
     align-items: flex-start;
+    justify-content: space-between;
     height: 400px;
     width: 700px;
     border: 1px solid grey;
@@ -25,7 +26,7 @@ const AddBookWrapper = styled.div`
         cursor: pointer;
     }
 
-    #title {
+    #title, #author {
         width: 80%;
     }
 `;

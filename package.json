@@ -12,6 +12,7 @@
     "express": "^4.16.4",
     "jest": "^24.8.0",
     "mongoose": "^5.5.7",
+    "multiselect-dropdown-react": "^1.0.5",
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.0",
     "prop-types": "^15.7.2",
