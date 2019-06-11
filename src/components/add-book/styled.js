@@ -5,8 +5,8 @@ const AddBookWrapper = styled.div`
     flex-direction: column;
     flex-flow: column;
     align-items: flex-start;
-    justify-content: space-between;
-    height: 400px;
+    justify-content: space-around;
+    height: 600px;
     width: 700px;
     border: 1px solid grey;
     margin-left: 20px;
