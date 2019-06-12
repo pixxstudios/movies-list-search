@@ -1,8 +1,8 @@
 import * as React from 'react';
 import AddBookWrapper from './styled';
 import Header from '../header';
-import Button from '../button';
-import { PRIMARY } from '../button/variants';
+import { Button } from 'antd';
+// import { PRIMARY } from '../button/variants';
 import Multiselect from 'multiselect-dropdown-react';
 
 const AddBook = props => {
@@ -51,8 +51,7 @@ const AddBook = props => {
                 <input type='author' id='author' placeholder='Book author ...'/>
                 <Multiselect options={categories} onSelectOptions={onCategoriesSelect}/>
                 <div>
-                    <Button variant={PRIMARY} value="Add" />
-                    <Button variant={PRIMARY} value="Cancel" click={onCancel}/>
+                    <Button type="primary">Primary</Button>
                 </div>
             </AddBookWrapper>
         </div>

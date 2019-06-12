@@ -4,6 +4,7 @@
   "description": "Implementing Swagger using MongoDB and NodeJS",
   "main": "index.js",
   "dependencies": {
+    "antd": "^3.19.3",
     "axios": "^0.18.0",
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.0",
