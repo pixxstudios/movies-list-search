@@ -3,7 +3,7 @@ import {
     applyMiddleware,
     compose
 } from 'redux';
-import thunk from 'redux-thunk';
+// import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 import combineReducers from './reducers'
 import { getMoviesSaga } from '../sagas/movies_saga';
@@ -12,7 +12,7 @@ const initialState = {};
 
 const sagaMiddleware = createSagaMiddleware();
 
-const middleware = [thunk, sagaMiddleware];
+const middleware = [sagaMiddleware];
 
 const store = createStore(
     combineReducers,

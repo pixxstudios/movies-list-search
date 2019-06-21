@@ -2,7 +2,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 import * as actions from '../src/actions';
 import axios from 'axios';
 
-export function* getBooks() {
+export function* getMovies() {
     const response = yield axios.get('../data/movies.json');
     if(response.status === 200)
         yield put(actions.getAllBooksSuccess(response.data));
@@ -10,6 +10,6 @@ export function* getBooks() {
         yield put(actions.getAllBooksFailure());
 }
 
-export function* getBooksSaga() {
-    yield takeLatest(actions.GET_ALL_BOOKS_REQUEST, getBooks);
+export function* getMoviesSaga() {
+    yield takeLatest(actions.GET_ALL_BOOKS_REQUEST, getMovies);
 }
