@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 200px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: sans-serif;
+    color: darkslateblue;
+}
+
+img {
+    height: 200px;
+}
+
+title {
+    font-size: 18px;
+}
+
+.actor {
+    margin-right: 10px;
+    border-right: 1px solid #483131;
+    padding-right: 10px;
+}
+
+.actor:last-child {
+    border: none;
+}
