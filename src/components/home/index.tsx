@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import BookCard from '../book-card';
 import Loader from '../loader';
 import Header from '../header';
-import { getAllBooksRequest } from '../../actions';
+import { getAllMoviesRequest } from '../../actions';
 
 const Home = (props: any) => {
     useEffect(() => {
-        props.getAllBooks();
+        props.getAllMovies();
     }, []);
 
     const { isLoading } = props;
@@ -36,14 +36,14 @@ const Home = (props: any) => {
 
 const mapStateToProps = state => {
     return {
-        booksList: state.books.booksList,
-        isLoading: state.books.isLoading
+        moviesList: state.movies.moviesList,
+        isLoading: state.movies.isLoading
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        getAllBooks: () => { dispatch(getAllBooksRequest()); }
+        getAllMovies: () => { dispatch(getAllMoviesRequest()); }
     }
 }
 

@@ -5,11 +5,11 @@ import axios from 'axios';
 export function* getMovies() {
     const response = yield axios.get('../data/movies.json');
     if(response.status === 200)
-        yield put(actions.getAllBooksSuccess(response.data));
+        yield put(actions.getAllMoviesSuccess(response.data));
     else
-        yield put(actions.getAllBooksFailure());
+        yield put(actions.getAllMoviesFailure());
 }
 
 export function* getMoviesSaga() {
-    yield takeLatest(actions.GET_ALL_BOOKS_REQUEST, getMovies);
+    yield takeLatest(actions.GET_ALL_MOVIES_REQUEST, getMovies);
 }
