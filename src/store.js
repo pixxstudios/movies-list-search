@@ -6,7 +6,7 @@ import {
 import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 import combineReducers from './reducers'
-import { getBooksSaga } from '../sagas/books_saga';
+import { getMoviesSaga } from '../sagas/movies_saga';
 
 const initialState = {};
 
@@ -23,6 +23,6 @@ const store = createStore(
     )
 );
 
-sagaMiddleware.run(getBooksSaga);
+sagaMiddleware.run(getMoviesSaga);
 
 export default store;

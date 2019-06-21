@@ -3,7 +3,7 @@ import * as actions from '../src/actions';
 import axios from 'axios';
 
 export function* getBooks() {
-    const response = yield axios.get('http://localhost:4444/books');
+    const response = yield axios.get('../data/movies.json');
     if(response.status === 200)
         yield put(actions.getAllBooksSuccess(response.data));
     else
