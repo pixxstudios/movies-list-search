@@ -12,13 +12,20 @@ const Home = (props: any) => {
     }, []);
 
     const { isLoading, moviesList } = props;
+    console.log(moviesList, props);
+    // const { searchedMovies, updateSearchedMovies } = useState[moviesList];
+
+    const handleOnSearch = (search) => {
+        // const filteredMovies = 
+        console.log(search);
+    }
 
     if (isLoading) {
         return <Loader isLoading/>
     } else {
     return(
         <div>
-            <Header />
+            <Header onSearch={handleOnSearch} />
             { moviesList.map(movie => <Card data={movie}/>) }
         </div>
     )}
