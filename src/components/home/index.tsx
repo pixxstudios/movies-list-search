@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import BookCard from '../book-card';
+import Card from '../card';
 import Loader from '../loader';
 import Header from '../header';
 import { getAllMoviesRequest } from '../../actions';
@@ -12,6 +12,7 @@ const Home = (props: any) => {
     }, []);
 
     const { isLoading } = props;
+    console.log(props);
     
     if (isLoading) {
         return <Loader isLoading/>
@@ -19,17 +20,7 @@ const Home = (props: any) => {
     return(
         <div>
             <Header />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
-            <BookCard />
+            <Card />
         </div>
     )}
 };

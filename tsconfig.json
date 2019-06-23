@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "jsx": "react"
+        "jsx": "react",
+        "resolveJsonModule": true,
+        "esModuleInterop": true
     }
 }

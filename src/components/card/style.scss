@@ -1,6 +1,7 @@
 .card {
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
     width: 80%;
     height: 200px;
     background: white;
@@ -8,10 +9,14 @@
     padding: 10px;
     font-family: sans-serif;
     color: darkslateblue;
+
+    div {
+        width: 85%;
+    }
 }
 
 img {
-    height: 200px;
+    height: 185px;
 }
 
 title {

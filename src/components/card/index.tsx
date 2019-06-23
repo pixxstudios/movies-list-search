@@ -1,8 +1,9 @@
-import React from 'react';
-import './style.css';
-import data from './data.json';
+import * as React from 'react';
+import './style.scss';
+const data = require('./data.json');
 
 const Card = () => {
+    console.log(data);
     return(
         <div className="card" data={data}>
             <div>
