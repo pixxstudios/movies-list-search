@@ -9,6 +9,15 @@ height: 70px;
 padding-top: 10px;
 border-bottom: 3px solid yellow;
 
+input {
+    height: 40px;
+    width: 300px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    color: grey;
+}
+
 ul {
     display: flex;
     justify-content: center;
