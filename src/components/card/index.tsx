@@ -1,11 +1,11 @@
 import * as React from 'react';
 import './style.scss';
-const data = require('./data.json');
 
-const Card = () => {
-    console.log(data);
+const Card = props => {
+    const { data }= props;
+    
     return(
-        <div className="card" data={data}>
+        <div className="card" key={data.title}>
             <div>
                 <h3>{data.title} ({data.year})</h3>
                 <p>{data.storyline}</p>

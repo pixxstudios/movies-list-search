@@ -11,16 +11,15 @@ const Home = (props: any) => {
         props.getAllMovies();
     }, []);
 
-    const { isLoading } = props;
-    console.log(props);
-    
+    const { isLoading, moviesList } = props;
+
     if (isLoading) {
         return <Loader isLoading/>
     } else {
     return(
         <div>
             <Header />
-            <Card />
+            { moviesList.map(movie => <Card data={movie}/>) }
         </div>
     )}
 };
