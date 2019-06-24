@@ -13,11 +13,11 @@ const Home = (props: any) => {
 
     const { isLoading, moviesList } = props;
     console.log(moviesList, props);
-    // const { searchedMovies, updateSearchedMovies } = useState[moviesList];
+    const [ searchedMovies, updateSearchedMovies ] = useState(moviesList);
 
     const handleOnSearch = (search) => {
         // const filteredMovies = 
-        console.log(search);
+        console.log(searchedMovies);
     }
 
     if (isLoading) {

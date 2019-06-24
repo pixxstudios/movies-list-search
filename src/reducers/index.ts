@@ -2,7 +2,8 @@ import { combineReducers } from 'redux';
 import * as actions from '../actions/index';
 
 const defaultState = {
-    isLoading: true
+    isLoading: true,
+    moviesList: [{}]
 };
 
 const moviesReducer = (state = defaultState, action) => {
