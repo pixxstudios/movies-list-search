@@ -12,6 +12,7 @@ const Home = (props: any) => {
     useEffect(() => {
         props.getAllMovies();
     }, []);
+    
     const [ movies, setMovies ] = useState(moviesList);
 
     const handleOnSearch = (search) => {

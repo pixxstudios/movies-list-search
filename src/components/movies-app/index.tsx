@@ -7,7 +7,6 @@ import AddBook from '../add-book';
 
 const customHistory = createBrowserHistory();
 
-console.log(history);
 export default () => {
     return (
         <Router history={customHistory}>
