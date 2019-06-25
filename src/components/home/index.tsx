@@ -26,7 +26,7 @@ const Home = (props: any) => {
     return(
         <div>
             <Header onSearch={handleOnSearch} />
-            { movies.map(movie => <Card data={movie}/>) }
+            { movies.map(movie => <Card data={movie} key={movie.title}/>) }
         </div>
     )}
 };
