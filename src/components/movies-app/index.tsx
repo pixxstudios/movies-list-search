@@ -3,7 +3,6 @@ import { Router, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Home from '../home'
 import Login from '../login'
-import AddBook from '../add-book';
 
 const customHistory = createBrowserHistory();
 
@@ -12,7 +11,6 @@ export default () => {
         <Router history={customHistory}>
             <Route path='/' exact component={Login} />
             <Route path='/home' component={Home} />
-            <Route path='/addbook' component={AddBook} />
         </Router>
     )
 }
