@@ -7,17 +7,17 @@ import Header from '../header';
 import { getAllMoviesRequest } from '../../actions';
 
 const Home = (props: any) => {
+    const { isLoading, moviesList } = props;
+
     useEffect(() => {
         props.getAllMovies();
     }, []);
-
-    const { isLoading, moviesList } = props;
-    console.log(moviesList, props);
-    const [ searchedMovies, updateSearchedMovies ] = useState(moviesList);
+    const [ movies, setMovies ] = useState(moviesList);
 
     const handleOnSearch = (search) => {
-        // const filteredMovies = 
-        console.log(searchedMovies);
+        const searchTerm = search.target.value.toLowerCase();
+        let results = moviesList.filter(movie => movie.title.toLowerCase().includes(searchTerm));
+        setMovies(results);
     }
 
     if (isLoading) {
@@ -26,7 +26,7 @@ const Home = (props: any) => {
     return(
         <div>
             <Header onSearch={handleOnSearch} />
-            { moviesList.map(movie => <Card data={movie}/>) }
+            { movies.map(movie => <Card data={movie}/>) }
         </div>
     )}
 };
