@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import { v4 } from 'uuid';
 import Card from '../card';
 import Loader from '../loader';
 import Header from '../header';
@@ -27,7 +28,7 @@ const Home = (props: any) => {
     return(
         <div>
             <Header onSearch={handleOnSearch} />
-            { movies.map(movie => <Card data={movie} key={movie.title}/>) }
+            { movies.map(movie => <Card data={movie} key={v4()}/>) }
         </div>
     )}
 };
