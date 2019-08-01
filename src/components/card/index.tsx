@@ -1,11 +1,12 @@
 import * as React from 'react';
+import { v4 } from 'uuid';
 import './style.scss';
 
 const Card = props => {
     const { data }= props;
     
     return(
-        <div className="card" key={data.title}>
+        <div className="card" key={ v4() }>
             <div>
                 <h3>{data.title} ({data.year})</h3>
                 <p>{data.storyline}</p>
