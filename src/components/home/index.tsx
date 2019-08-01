@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import Card from '../card';
@@ -7,14 +8,15 @@ import Loader from '../loader';
 import Header from '../header';
 import { getAllMoviesRequest } from '../../actions';
 
-const Home = (props: any) => {
-    const { isLoading, moviesList } = props;
+const Home = () => {
+    const dispatch = useDispatch();
+    const { isLoading, moviesList } = useSelector(state => state.movies, []);
 
     useEffect(() => {
-        props.getAllMovies();
+        dispatch(getAllMoviesRequest());
     }, []);
     
-    const [ movies, setMovies ] = useState(moviesList);
+    const [movies, setMovies] = useState(moviesList);
 
     const handleOnSearch = (search) => {
         const searchTerm = search.target.value.toLowerCase();
@@ -33,17 +35,4 @@ const Home = (props: any) => {
     )}
 };
 
-const mapStateToProps = state => {
-    return {
-        moviesList: state.movies.moviesList,
-        isLoading: state.movies.isLoading
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        getAllMovies: () => { dispatch(getAllMoviesRequest()); }
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);  
+export default Home;
