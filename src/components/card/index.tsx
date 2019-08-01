@@ -4,7 +4,6 @@ import './style.scss';
 
 const Card = props => {
     const { data } = props;
-    console.log(data);
     
     return(
         <div className="card" key={v4()}>

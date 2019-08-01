@@ -10,13 +10,17 @@ import { getAllMoviesRequest } from '../../actions';
 
 const Home = () => {
     const dispatch = useDispatch();
-    const { isLoading, moviesList } = useSelector(state => state.movies, []);
+    const { isLoading, moviesList } = useSelector(state => state.movies, []);\
 
     useEffect(() => {
         dispatch(getAllMoviesRequest());
     }, []);
     
     const [movies, setMovies] = useState(moviesList);
+
+    useEffect(() => {
+        setMovies(moviesList);
+    }, [moviesList]);
 
     const handleOnSearch = (search) => {
         const searchTerm = search.target.value.toLowerCase();

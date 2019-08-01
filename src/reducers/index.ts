@@ -3,7 +3,7 @@ import * as actions from '../actions/index';
 
 const defaultState = {
     isLoading: true,
-    moviesList: [{}]
+    moviesList: []
 };
 
 const moviesReducer = (state = defaultState, action) => {
