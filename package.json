@@ -51,7 +51,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production",
+    "production": "webpack --mode production",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
