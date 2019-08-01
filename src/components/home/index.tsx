@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import Card from '../card';
 import Loader from '../loader';
 import Header from '../header';
 import { getAllMoviesRequest } from '../../actions';
+import Wrapper from './styled';
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -32,10 +32,12 @@ const Home = () => {
         return <Loader isLoading/>
     } else {
     return(
-        <div>
+        <React.Fragment>
             <Header onSearch={handleOnSearch} />
+            <Wrapper>
             { movies.map(movie => <Card data={movie} key={v4()}/>) }
-        </div>
+            </Wrapper>
+        </React.Fragment>
     )}
 };
 

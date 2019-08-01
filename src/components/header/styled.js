@@ -8,6 +8,9 @@ background-color: #55a8f3;
 height: 70px;
 padding-top: 10px;
 border-bottom: 3px solid yellow;
+position: fixed;
+width: 100%;
+z-index: 9999999;
 
 input {
     height: 40px;
